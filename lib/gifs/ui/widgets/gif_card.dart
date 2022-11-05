@@ -22,7 +22,8 @@ class _GifCardState extends State<GifCard> {
           Image.network(
             widget.item.images.downsized.url,
             height: widget.item.images.downsized.height,
-            fit: BoxFit.fitHeight,
+            width: double.infinity,
+            fit: BoxFit.cover,
             loadingBuilder: (context, child, progress) {
               if (progress == null) return child;
               return Center(
