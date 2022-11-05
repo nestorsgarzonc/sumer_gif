@@ -17,19 +17,6 @@ class _GifsScreenState extends State<GifsScreen> {
   final _controller = TextEditingController();
 
   @override
-  void initState() {
-    super.initState();
-    _controller.addListener(_onWrite);
-  }
-
-  @override
-  void dispose() {
-    _controller.removeListener(_onWrite);
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: DecoratedBox(
@@ -54,6 +41,7 @@ class _GifsScreenState extends State<GifsScreen> {
                       prefixIcon: Icon(Icons.search, color: Colors.black),
                     ),
                     controller: _controller,
+                    onChanged: (value) => _onWrite(),
                   ),
                 ),
               ),
