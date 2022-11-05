@@ -15,6 +15,15 @@ class CustomTheme {
         ),
       ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
+      inputDecorationTheme: InputDecorationTheme(
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: Colors.transparent),
+        ),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+        fillColor: Colors.grey[200],
+        filled: true,
+      ),
     );
   }
 }

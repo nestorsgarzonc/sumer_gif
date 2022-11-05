@@ -1,17 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sumer_gif/gifs/ui/gifs_screen.dart';
+import 'package:sumer_gif/app.dart';
+import 'package:sumer_gif/core/di/di.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      debugShowCheckedModeBanner: false,
-      home: GifsScreen(),
-    );
-  }
+void main() {
+  DI.setup();
+  runApp(const MyApp());
 }

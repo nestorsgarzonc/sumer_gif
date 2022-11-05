@@ -174,7 +174,6 @@ class ApiHandlerImpl implements ApiHandler {
     return {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      //TODO: ADD if (token != null) 'auth-token': token,
     };
   }
 
